@@ -12,7 +12,9 @@ let code;
 
 document.getElementById("game").style.display = "none";
 
-const socket = window.io("wss://en-passant.fly.dev:8080");
+const socket = window.io("wss://en-passant.fly.dev:8080", {
+  transports: ["websocket"],
+});
 
 socket.on("connected", (...args) => {
   console.log("Connected!");

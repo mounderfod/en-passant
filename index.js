@@ -20,6 +20,11 @@ socket.on("connected", (...args) => {
   $("#reason").text("Checkmate - White wins!");
 });
 
+socket.on("connect_error", (err) => {
+  document.getElementById("status").innerText =
+    "Connection failed. Please try later.";
+});
+
 socket.on("joined", (...args) => {
   document.getElementById("status").innerText =
     "Waiting for other player to join...";

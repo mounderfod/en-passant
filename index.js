@@ -21,6 +21,7 @@ socket.on("connected", (...args) => {
 });
 
 socket.on("connect_error", (err) => {
+  console.log(err);
   document.getElementById("status").innerText =
     "Connection failed. Please try later.";
 });

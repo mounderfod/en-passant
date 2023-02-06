@@ -12,7 +12,7 @@ let code;
 
 document.getElementById("game").style.display = "none";
 
-const socket = window.io("ws://en-passant.fly.dev:8080");
+const socket = window.io("wss://en-passant.fly.dev:8080");
 
 socket.on("connected", (...args) => {
   console.log("Connected!");

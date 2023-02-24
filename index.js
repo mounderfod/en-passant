@@ -89,7 +89,7 @@ socket.on("moved", (...args) => {
         : "Draw";
     }
 
-    socket.emit("gameOver", { code: 12345, reason: reason });
+    socket.emit("gameOver", { code: code, reason: reason });
   }
 });
 
